@@ -1,0 +1,100 @@
+﻿# =========================================================================
+# .gitignore untuk Concorde Landing Page (Company Profile / PHP Native)
+# =========================================================================
+
+# -------------------------------------------------------------------------
+# 1. FILE ARSIP & BACKUP (UKURAN BESAR)
+# -------------------------------------------------------------------------
+# Mencegah terunggahnya file zip besar (P017-Company-Profile-Concorde.zip ~59MB & tani-menus.zip)
+*.zip
+*.rar
+*.tar
+*.tar.gz
+*.7z
+*.bak
+*.old
+
+# -------------------------------------------------------------------------
+# 2. DATABASE & SQL DUMPS
+# -------------------------------------------------------------------------
+# Mencegah bocornya data kredensial/password admin dan user di database dump.
+# File skema yang aman dan sudah disanitasi disediakan via *.example.sql
+*.sql
+!*.example.sql
+*.sqlite
+*.sqlite3
+*.db
+database/sql/*
+!database/sql/.gitkeep
+!database/sql/*.example.sql
+
+# -------------------------------------------------------------------------
+# 3. DEMO ASSETS & UNUSED MEDIA (OPSIONAL / UKURAN BESAR)
+# -------------------------------------------------------------------------
+# Video demo bawaan template HTML Codex (beach.mp4 & beach.webm ~20MB)
+assets/video/*.mp4
+assets/video/*.webm
+
+# Source map template CSS (ukuran total ~6.6MB)
+*.css.map
+*.js.map
+
+# -------------------------------------------------------------------------
+# 4. KREDENSIAL, ENVIRONMENT & SECRETS
+# -------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# -------------------------------------------------------------------------
+# 5. FILE SAMPAH SISTEM OPERASI (OS ARTIFACTS)
+# -------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+
+# -------------------------------------------------------------------------
+# 6. TEMPORARY & LOCK FILES (OFFICE / EDITOR)
+# -------------------------------------------------------------------------
+~$*
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# -------------------------------------------------------------------------
+# 7. IDE & TEXT EDITOR CONFIGURATIONS
+# -------------------------------------------------------------------------
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-workspace
+*.sublime-project
+
+# -------------------------------------------------------------------------
+# 8. LOGS & CACHE
+# -------------------------------------------------------------------------
+*.log
+logs/
+error_log
+php_errors.log
+.sass-cache/
+
+# -------------------------------------------------------------------------
+# 9. DEPENDENCY MANAGERS (FUTURE-PROOF)
+# -------------------------------------------------------------------------
+# '/vendor/' dengan awalan slash agar tidak memengaruhi folder 'vendors/' (aset frontend)
+/vendor/
+node_modules/
